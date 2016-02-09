@@ -7,6 +7,7 @@
 //
 
 #import "FISTriviaTableViewController.h"
+#import "FISAddTriviaTableViewController.h"
 
 @interface FISTriviaTableViewController ()
 
@@ -19,12 +20,21 @@
     
     [self.tableView setAccessibilityLabel:@"Trivia Table"];
     [self.tableView setAccessibilityIdentifier:@"Trivia Table"];
+    [self.navigationItem.rightBarButtonItem setAccessibilityLabel:@"Add Trivia Button"];
+    [self.navigationItem.rightBarButtonItem setAccessibilityIdentifier:@"Add Trivia Button"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -88,14 +98,14 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    if (![segue.identifier isEqualToString:@"addTrivium"]) return;
+    FISAddTriviaTableViewController *addTriviaTableViewController = (FISAddTriviaTableViewController *)segue.destinationViewController;
+    [addTriviaTableViewController setLocation:self.location];
 }
-*/
 
 @end
