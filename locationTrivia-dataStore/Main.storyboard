@@ -113,7 +113,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="ETx-Uy-4Tt" kind="show" identifier="segueTrivia" id="O8A-Yg-GfC"/>
+                                    <segue destination="ETx-Uy-4Tt" kind="show" identifier="showTrivia" id="O8A-Yg-GfC"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -122,7 +122,13 @@
                             <outlet property="delegate" destination="yNt-Wk-tOK" id="kQs-1y-8QK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="bcC-0S-ggr"/>
+                    <navigationItem key="navigationItem" id="bcC-0S-ggr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ahk-22-9JM">
+                            <connections>
+                                <segue destination="2ng-AG-whQ" kind="presentation" identifier="addLocation" id="v5g-9i-ZK7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u1f-kG-puC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -170,7 +176,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MbH-UO-c3G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1989" y="442"/>
+            <point key="canvasLocation" x="1986" y="442"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cIT-QH-08h">

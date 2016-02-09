@@ -21,6 +21,8 @@
     
     [self.tableView setAccessibilityLabel:@"Locations Table"];
     [self.tableView setAccessibilityIdentifier:@"Locations Table"];
+    [self.navigationItem.rightBarButtonItem setAccessibilityLabel:@"addButton"];
+    [self.navigationItem.rightBarButtonItem setAccessibilityIdentifier:@"addButton"];
     
     [self setStore:[FISLocationsDataStore sharedLocationsDataStore]];
     
@@ -96,6 +98,8 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if (![segue.identifier isEqualToString:@"showTrivia"]) return;
     
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
     FISLocation *location = [self.store.locations objectAtIndex:indexPath.row];
