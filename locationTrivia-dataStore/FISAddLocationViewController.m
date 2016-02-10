@@ -13,7 +13,7 @@
 @property (nonatomic, strong) IBOutlet UITextField *nameTextField;
 @property (nonatomic, strong) IBOutlet UITextField *latitudeTextField;
 @property (nonatomic, strong) IBOutlet UITextField *longitudeTextField;
-- (IBAction)submit:(id)sender;
+- (IBAction)save:(id)sender;
 - (IBAction)cancel:(id)sender;
 @end
 
@@ -39,9 +39,9 @@
 }
 */
 
-- (IBAction)submit:(id)sender {
+- (IBAction)save:(id)sender {
     
-    FISLocation *location = [[FISLocation alloc] initWithName:self.nameTextField.text latitude:self.latitudeTextField.text.floatValue longitude:self.longitudeTextField.text.floatValue];
+    FISLocation *location = [[FISLocation alloc] initWithName:self.nameTextField.text latitude:self.latitudeTextField.text.doubleValue longitude:self.longitudeTextField.text.doubleValue];
     [[FISLocationsDataStore sharedLocationsDataStore].locations addObject:location];
     [self dismissViewControllerAnimated:YES completion:nil];
 }

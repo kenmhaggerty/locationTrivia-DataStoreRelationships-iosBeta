@@ -44,12 +44,12 @@
                                     <action selector="cancel:" destination="2ng-AG-whQ" eventType="touchUpInside" id="G8l-KN-W03"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vrd-A3-nt2">
-                                <rect key="frame" x="418" y="104" width="49" height="30"/>
-                                <accessibility key="accessibilityConfiguration" identifier="submitButton" label="submitButton"/>
-                                <state key="normal" title="Submit"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vrd-A3-nt2">
+                                <rect key="frame" x="426" y="104" width="34" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="saveButton" label="saveButton"/>
+                                <state key="normal" title="Save"/>
                                 <connections>
-                                    <action selector="submit:" destination="2ng-AG-whQ" eventType="touchUpInside" id="tAX-Az-YhF"/>
+                                    <action selector="save:" destination="2ng-AG-whQ" eventType="touchUpInside" id="Ydd-O6-kCH"/>
                                 </connections>
                             </button>
                         </subviews>
